@@ -8,6 +8,7 @@ devDependencies:
   '@babel/cli': 7.2.3
   '@babel/core': 7.2.2
   '@babel/plugin-proposal-class-properties': 7.2.3
+  '@babel/plugin-syntax-dynamic-import': 7.2.0
   '@babel/preset-env': 7.2.3
   '@babel/preset-react': 7.0.0
   babel-loader: 8.0.5
@@ -320,6 +321,14 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-1ZrIRBv2t0GSlcwVoQ6VgSLpLgiN/FVQUzt9znxo7v2Ov4jJrs8RY8tv0wvDmFN3qIdMKWrmMMW6yZ0G19MfGg==
+  /@babel/plugin-syntax-dynamic-import/7.2.0:
+    dependencies:
+      '@babel/helper-plugin-utils': 7.0.0
+    dev: true
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    resolution:
+      integrity: sha512-mVxuJ0YroI/h/tbFTPGZR8cv6ai+STMKNBq0f8hFxsxWjl94qqhsb+wXbpNMDPU3cfR1TIsVFzU3nXyZMqyK4w==
   /@babel/plugin-syntax-json-strings/7.2.0:
     dependencies:
       '@babel/helper-plugin-utils': 7.0.0
@@ -5474,6 +5483,7 @@ specifiers:
   '@babel/cli': ^7.2.3
   '@babel/core': ^7.2.2
   '@babel/plugin-proposal-class-properties': ^7.2.3
+  '@babel/plugin-syntax-dynamic-import': ^7.2.0
   '@babel/polyfill': ^7.2.5
   '@babel/preset-env': ^7.2.3
   '@babel/preset-react': ^7.0.0
