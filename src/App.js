@@ -5,7 +5,7 @@ const Warning = React.lazy(() => import('./Warning'))
 
 class App extends React.Component {
   state = {
-    count: 0,
+    count: 0
   }
 
   increment = () => {

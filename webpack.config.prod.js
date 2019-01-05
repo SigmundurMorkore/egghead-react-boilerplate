@@ -9,11 +9,11 @@ module.exports = merge(baseConfig, {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
-      reportFilename: 'bundle_sizes.html',
-    }),
+      reportFilename: 'bundle_sizes.html'
+    })
   ],
   externals: {
     react: 'React',
-    'react-dom': 'ReactDOM',
-  },
+    'react-dom': 'ReactDOM'
+  }
 })

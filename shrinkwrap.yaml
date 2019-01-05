@@ -19,6 +19,8 @@ devDependencies:
   html-webpack-plugin: 3.2.0
   jest: 23.6.0
   jest-dom: 3.0.0
+  prettier: 1.15.3
+  pretty-quick: 1.8.0
   react-testing-library: 5.4.4
   style-loader: 0.23.1
   webpack: 4.28.3
@@ -2632,6 +2634,20 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-lEvs00zEHuMqY6n68nrVpl/Fl3c=
+  /execa/0.8.0:
+    dependencies:
+      cross-spawn: 5.1.0
+      get-stream: 3.0.0
+      is-stream: 1.1.0
+      npm-run-path: 2.0.2
+      p-finally: 1.0.0
+      signal-exit: 3.0.2
+      strip-eof: 1.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-2NdrvBtVIX7RkP1t1J08d07PyNo=
   /execa/1.0.0:
     dependencies:
       cross-spawn: 6.0.5
@@ -3508,6 +3524,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-xg7taebY/bazEEofy8ocGS3FtQE=
+  /ignore/3.3.10:
+    dev: true
+    resolution:
+      integrity: sha512-Pgs951kaMm5GXP7MOvxERINe3gsaVjUWFm+UZPSq9xYriQAksyhg0csnS0KXSNRD5NmNdapXEpjxG49+AKh/ug==
   /import-local/1.0.0:
     dependencies:
       pkg-dir: 2.0.0
@@ -4895,6 +4915,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-viwAX9oy4LKa8fBdfEszIUxwH5I=
+  /mri/1.1.4:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-6y7IjGPm8AzlvoUrwAaw1tLnUBudaS3752vcd8JtrpGGQn+rXIe63LFVHm/YMwtqAuh+LJPCFdlLYPWM1nYn6w==
   /ms/2.0.0:
     dev: true
     resolution:
@@ -5604,6 +5630,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
+  /prettier/1.15.3:
+    dev: true
+    engines:
+      node: '>=4'
+    hasBin: true
+    resolution:
+      integrity: sha512-gAU9AGAPMaKb3NNSUUuhhFAS7SCO4ALTN4nRIn6PJ075Qd28Yn2Ig2ahEJWdJwJmlEBTUfC7mMUSFy8MwsOCfg==
   /pretty-error/2.1.1:
     dependencies:
       renderkid: 2.0.2
@@ -5618,6 +5651,19 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zf9NV1NSlDLDjycnwm6hpFATCGl/K1lt0R/GdkAK2O5LN/rwJoB+Mh93gGJjut4YbmecbfgLWVGSTCr0Ewvvbw==
+  /pretty-quick/1.8.0:
+    dependencies:
+      chalk: 2.4.1
+      execa: 0.8.0
+      find-up: 2.1.0
+      ignore: 3.3.10
+      mri: 1.1.4
+    dev: true
+    hasBin: true
+    peerDependencies:
+      prettier: '>=1.8.0'
+    resolution:
+      integrity: sha512-qV25sQF/ivJpdZ5efwemQYkQJa7sp3HqT/Vf/7z5vGYMcq1VrT2lDpFKAxJPf6219N1YAdR8mGkIhPAZ1odTmQ==
   /private/0.1.8:
     dev: true
     engines:
@@ -7590,6 +7636,8 @@ specifiers:
   html-webpack-plugin: ^3.2.0
   jest: ^23.6.0
   jest-dom: ^3.0.0
+  prettier: ^1.15.3
+  pretty-quick: ^1.8.0
   prop-types: ^15.6.2
   react: ^16.7.0
   react-dom: ^16.7.0
