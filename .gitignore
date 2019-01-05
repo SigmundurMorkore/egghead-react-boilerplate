@@ -1,0 +1,8 @@
+# VSCode
+.vscode
+
+# Build
+dist
+
+# pnpm
+node_modules
