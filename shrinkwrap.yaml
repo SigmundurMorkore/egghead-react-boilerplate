@@ -21,6 +21,7 @@ devDependencies:
   eslint-plugin-jsx-a11y: 6.1.2
   eslint-plugin-react: 7.12.3
   html-webpack-plugin: 3.2.0
+  husky: 1.3.1
   jest: 23.6.0
   jest-dom: 3.0.0
   prettier: 1.15.3
@@ -1719,6 +1720,22 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-AKcdTnFSWATd5/GCPRxr2ChwIJ85CeyrEyjRHlKxQ56d4XJMGym0uAiKn0xbLOGOl3+yRpOTi484dVCEc5AUzQ==
+  /caller-callsite/2.0.0:
+    dependencies:
+      callsites: 2.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-hH4PzgoiN1CpoCfFSzNzGtMVQTQ=
+  /caller-path/2.0.0:
+    dependencies:
+      caller-callsite: 2.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-Ro+DBE42mrIBD6xfBs7uFbsssfQ=
   /callsites/2.0.0:
     dev: true
     engines:
@@ -1833,6 +1850,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-vsGdkwSCDpWmP80ncATX7iea5DWQemg1UgCW5J8tqjU3lYw4FBYuj89J0CTVomA7BEfvSZd84GmHko+MxFQU2A==
+  /ci-info/2.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
   /cipher-base/1.0.4:
     dependencies:
       inherits: 2.0.3
@@ -2045,6 +2066,17 @@ packages:
     dev: true
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+  /cosmiconfig/5.0.7:
+    dependencies:
+      import-fresh: 2.0.0
+      is-directory: 0.3.1
+      js-yaml: 3.12.0
+      parse-json: 4.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-PcLqxTKiDmNT6pSpy4N6KtuPwb53W+2tzNvwOZw0WH9N6O0vLIBq0x8aj8Oj75ere4YcGi48bDFCL+3fRJdlNA==
   /create-ecdh/4.0.3:
     dependencies:
       bn.js: 4.11.8
@@ -3320,6 +3352,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-3t6rVToeoZfYSGd8YoLFR2DJkiQrIiUrGcjvFX2mDw3bn6k2OtwHN0TNCLbBO+w8qTvimhDkv+LSscbJY1vE6w==
+  /get-stdin/6.0.0:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
   /get-stream/3.0.0:
     dev: true
     engines:
@@ -3730,6 +3768,25 @@ packages:
     dev: true
     resolution:
       integrity: sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
+  /husky/1.3.1:
+    dependencies:
+      cosmiconfig: 5.0.7
+      execa: 1.0.0
+      find-up: 3.0.0
+      get-stdin: 6.0.0
+      is-ci: 2.0.0
+      pkg-dir: 3.0.0
+      please-upgrade-node: 3.1.1
+      read-pkg: 4.0.1
+      run-node: 1.0.0
+      slash: 2.0.0
+    dev: true
+    engines:
+      node: '>=6'
+    hasBin: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-86U6sVVVf4b5NYSZ0yvv88dRgBSSXXmHaiq5pP4KDj5JVzdwKgBjEtUPOm8hcoytezFwbU+7gotXNhpHdystlg==
   /iconv-lite/0.4.23:
     dependencies:
       safer-buffer: 2.1.2
@@ -3776,6 +3833,15 @@ packages:
       node: '>= 4'
     resolution:
       integrity: sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
+  /import-fresh/2.0.0:
+    dependencies:
+      caller-path: 2.0.0
+      resolve-from: 3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-2BNVwVYS04bGH53dOSLUMEgipUY=
   /import-fresh/3.0.0:
     dependencies:
       parent-module: 1.0.0
@@ -3986,6 +4052,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-s6tfsaQaQi3JNciBH6shVqEDvhGut0SUXr31ag8Pd8BBbVVlcGfWhpPmEOoM6RJ5TFhbypvf5yyRw/VXW1IiWg==
+  /is-ci/2.0.0:
+    dependencies:
+      ci-info: 2.0.0
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-YfJT7rkpQB0updsdHLGWrvhBJfcfzNNawYDNIyQXJz0IViGf75O8EBPKSdvw2rF+LGCsX4FZ8tcr3b19LcZq4w==
   /is-data-descriptor/0.1.4:
     dependencies:
       kind-of: 3.2.2
@@ -4028,6 +4101,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-2eis5WqQGV7peooDyLmNEPUrps9+SXX5c9pL3xEB+4e9HnGuDa7mB7kHxHw4CbqS9k1T2hOH3miL8n8WtiYVtg==
+  /is-directory/0.3.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-YTObbyR1/Hcv2cnYP1yFddwVSuE=
   /is-dotfile/1.0.3:
     dev: true
     engines:
@@ -5722,6 +5801,15 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-9ID0BDTvgHQfhGkJn43qGPVaTck=
+  /parse-json/4.0.0:
+    dependencies:
+      error-ex: 1.3.2
+      json-parse-better-errors: 1.0.2
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-vjX1Qlvh9/bHRxhPmKeIy5lHfuA=
   /parse-passwd/1.0.0:
     dev: true
     engines:
@@ -5858,6 +5946,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-/E57AYkoeQ25qkxMj5PBOVgF8Kiu/h7cYS30Z5+R7WaiCCBfLq58ZI/dSeaEKb9WVJV5n/03QwrN3IeWIFllvw==
+  /please-upgrade-node/3.1.1:
+    dependencies:
+      semver-compare: 1.0.0
+    dev: true
+    resolution:
+      integrity: sha512-KY1uHnQ2NlQHqIJQpnh/i54rKkuxCEBx+voJIS/Mvb+L2iYd2NMotwduhKTMjfC1uKoX3VXOxLjIYG66dfJTVQ==
   /pluralize/7.0.0:
     dev: true
     engines:
@@ -6229,6 +6323,16 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-9f+qXs0pyzHAR0vKfXVra7KePyg=
+  /read-pkg/4.0.1:
+    dependencies:
+      normalize-package-data: 2.4.0
+      parse-json: 4.0.0
+      pify: 3.0.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha1-ljYlN48+HE1IyFhytabsfV0JMjc=
   /readable-stream/1.0.34:
     dependencies:
       core-util-is: 1.0.2
@@ -6575,6 +6679,13 @@ packages:
       node: '>=0.12.0'
     resolution:
       integrity: sha1-A3GrSuC91yDUFm19/aZP96RFpsA=
+  /run-node/1.0.0:
+    dev: true
+    engines:
+      node: '>=4'
+    hasBin: true
+    resolution:
+      integrity: sha512-kc120TBlQ3mih1LSzdAJXo4xn/GWS2ec0l3S+syHDXP9uRr0JAT8Qd3mdMuyjqCzeZktgP3try92cEgf9Nks8A==
   /run-queue/1.0.3:
     dependencies:
       aproba: 1.2.0
@@ -6665,6 +6776,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-9AukTiDmHXGXWtWjembZ5NDmVvP2695EtpgbCsxCa68w3c88B+alqbmZ4O3hZ4VWGXeGWzEVdvqgAJD8DQPCDw==
+  /semver-compare/1.0.0:
+    dev: true
+    resolution:
+      integrity: sha1-De4hahyUGrN+nvsXiPavxf9VN/w=
   /semver/5.6.0:
     dev: true
     hasBin: true
@@ -8023,6 +8138,7 @@ specifiers:
   eslint-plugin-jsx-a11y: ^6.1.2
   eslint-plugin-react: ^7.12.3
   html-webpack-plugin: ^3.2.0
+  husky: ^1.3.1
   jest: ^23.6.0
   jest-dom: ^3.0.0
   prettier: ^1.15.3
