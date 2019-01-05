@@ -6,3 +6,7 @@ dist
 
 # pnpm
 node_modules
+
+# Ignore package-lock because we're using pnpm,
+# but some occasionally packages need to be installed with npm/yarn.
+package-lock.json
