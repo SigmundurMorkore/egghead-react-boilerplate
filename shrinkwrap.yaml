@@ -5,10 +5,13 @@ dependencies:
 devDependencies:
   '@babel/cli': 7.2.3
   '@babel/core': 7.2.2
+  '@babel/plugin-proposal-class-properties': 7.2.3
   '@babel/preset-env': 7.2.3
   '@babel/preset-react': 7.0.0
   babel-loader: 8.0.5
+  css-loader: 2.1.0
   html-webpack-plugin: 3.2.0
+  style-loader: 0.23.1
   webpack: 4.28.3
   webpack-cli: 3.2.0
   webpack-dev-server: 3.1.14
@@ -98,6 +101,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-YEtYZrw3GUK6emQHKthltKNZwszBcHK58Ygcis+gVUrF4/FmTVr5CCqQNSfmvg2y+YDEANyYoaLz/SHsnusCwQ==
+  /@babel/helper-create-class-features-plugin/7.2.3:
+    dependencies:
+      '@babel/helper-function-name': 7.1.0
+      '@babel/helper-member-expression-to-functions': 7.0.0
+      '@babel/helper-optimise-call-expression': 7.0.0
+      '@babel/helper-plugin-utils': 7.0.0
+      '@babel/helper-replace-supers': 7.2.3
+    dev: true
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    resolution:
+      integrity: sha512-xO/3Gn+2C7/eOUeb0VRnSP1+yvWHNxlpAot1eMhtoKDCN7POsyQP5excuT5UsV5daHxMWBeIIOeI5cmB8vMRgQ==
   /@babel/helper-define-map/7.1.0:
     dependencies:
       '@babel/helper-function-name': 7.1.0
@@ -246,6 +261,15 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-+Dfo/SCQqrwx48ptLVGLdE39YtWRuKc/Y9I5Fy0P1DDBB9lsAHpjcEJQt+4IifuSOSTLBKJObJqMvaO1pIE8LQ==
+  /@babel/plugin-proposal-class-properties/7.2.3:
+    dependencies:
+      '@babel/helper-create-class-features-plugin': 7.2.3
+      '@babel/helper-plugin-utils': 7.0.0
+    dev: true
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    resolution:
+      integrity: sha512-FVuQngLoN2iDrpW7LmhPZ2sO4DJxf35FOcwidwB9Ru9tMvI5URthnkVHuG14IStV+TzkMTyLMoOUlSTtrdVwqw==
   /@babel/plugin-proposal-json-strings/7.2.0:
     dependencies:
       '@babel/helper-plugin-utils': 7.0.0
@@ -1607,6 +1631,25 @@ packages:
     dev: true
     resolution:
       integrity: sha512-fz4spIh+znjO2VjL+IdhEpRJ3YN6sMzITSBijk6FK2UvTqruSQW+/cCZTSNsMiZNvUeq0CqurF+dAbyiGOY6Wg==
+  /css-loader/2.1.0:
+    dependencies:
+      icss-utils: 4.0.0
+      loader-utils: 1.2.3
+      lodash: 4.17.11
+      postcss: 7.0.7
+      postcss-modules-extract-imports: 2.0.0
+      postcss-modules-local-by-default: 2.0.4
+      postcss-modules-scope: 2.0.1
+      postcss-modules-values: 2.0.0
+      postcss-value-parser: 3.3.1
+      schema-utils: 1.0.0
+    dev: true
+    engines:
+      node: '>= 6.9.0'
+    peerDependencies:
+      webpack: ^4.0.0
+    resolution:
+      integrity: sha512-MoOu+CStsGrSt5K2OeZ89q3Snf+IkxRfAIt9aAKg4piioTrhtP1iEFPu+OVn3Ohz24FO6L+rw9UJxBILiSBw5Q==
   /css-select/1.2.0:
     dependencies:
       boolbase: 1.0.0
@@ -1616,10 +1659,23 @@ packages:
     dev: true
     resolution:
       integrity: sha1-KzoRBTnFNV8c2NMUYj6HCxIeyFg=
+  /css-selector-tokenizer/0.7.1:
+    dependencies:
+      cssesc: 0.1.0
+      fastparse: 1.1.2
+      regexpu-core: 1.0.0
+    dev: true
+    resolution:
+      integrity: sha512-xYL0AMZJ4gFzJQsHUKa5jiWWi2vH77WVNg7JYRyewwj6oPh4yb/y6Y9ZCw9dsj/9UauMhtuxR+ogQd//EdEVNA==
   /css-what/2.1.2:
     dev: true
     resolution:
       integrity: sha512-wan8dMWQ0GUeF7DGEPVjhHemVW/vy6xUYmFzRY8RYqgA0JtXC9rJmbScBjqSu6dg9q0lwPQy6ZAmJVr3PPTvqQ==
+  /cssesc/0.1.0:
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha1-yBSQPkViM3GgR3tAEJqq++6t27Q=
   /cyclist/0.2.2:
     dev: true
     resolution:
@@ -2134,6 +2190,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-1RQsDK7msRifh9OnYREGT4bIu/I=
+  /fastparse/1.1.2:
+    dev: true
+    resolution:
+      integrity: sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==
   /faye-websocket/0.10.0:
     dependencies:
       websocket-driver: 0.7.0
@@ -2606,6 +2666,18 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
+  /icss-replace-symbols/1.1.0:
+    dev: true
+    resolution:
+      integrity: sha1-Bupvg2ead0njhs/h/oEq5dsiPe0=
+  /icss-utils/4.0.0:
+    dependencies:
+      postcss: 7.0.7
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-bA/xGiwWM17qjllIs9X/y0EjsB7e0AV08F3OL8UPsoNkNRibIuu8f1eKTnQ8QO1DteKKTxTUAn+IEWUToIwGOA==
   /ieee754/1.1.12:
     dev: true
     resolution:
@@ -3785,6 +3857,54 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
+  /postcss-modules-extract-imports/2.0.0:
+    dependencies:
+      postcss: 7.0.7
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-LaYLDNS4SG8Q5WAWqIJgdHPJrDDr/Lv775rMBFUbgjTz6j34lUznACHcdRWroPvXANP2Vj7yNK57vp9eFqzLWQ==
+  /postcss-modules-local-by-default/2.0.4:
+    dependencies:
+      css-selector-tokenizer: 0.7.1
+      postcss: 7.0.7
+      postcss-value-parser: 3.3.1
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-WvuSaTKXUqYJbnT7R3YrsNrHv/C5vRfr5VglS4bFOk0MYT4CLBfc/xgExA+x2RftlYgiBDvWmVs191Xv8S8gZQ==
+  /postcss-modules-scope/2.0.1:
+    dependencies:
+      css-selector-tokenizer: 0.7.1
+      postcss: 7.0.7
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-7+6k9c3/AuZ5c596LJx9n923A/j3nF3ormewYBF1RrIQvjvjXe1xE8V8A1KFyFwXbvnshT6FBZFX0k/F1igneg==
+  /postcss-modules-values/2.0.0:
+    dependencies:
+      icss-replace-symbols: 1.1.0
+      postcss: 7.0.7
+    dev: true
+    resolution:
+      integrity: sha512-Ki7JZa7ff1N3EIMlPnGTZfUMe69FFwiQPnVSXC9mnn3jozCRBYIxiZd44yJOV2AmabOo4qFf8s0dC/+lweG7+w==
+  /postcss-value-parser/3.3.1:
+    dev: true
+    resolution:
+      integrity: sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==
+  /postcss/7.0.7:
+    dependencies:
+      chalk: 2.4.1
+      source-map: 0.6.1
+      supports-color: 5.5.0
+    dev: true
+    engines:
+      node: '>=6.0.0'
+    resolution:
+      integrity: sha512-HThWSJEPkupqew2fnuQMEI2YcTj/8gMV3n80cMdJsKxfIh5tHf7nM5JigNX6LxVMqo6zkgQNAI88hyFvBk41Pg==
   /pretty-error/2.1.1:
     dependencies:
       renderkid: 2.0.2
@@ -4029,6 +4149,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==
+  /regexpu-core/1.0.0:
+    dependencies:
+      regenerate: 1.4.0
+      regjsgen: 0.2.0
+      regjsparser: 0.1.5
+    dev: true
+    resolution:
+      integrity: sha1-hqdj9Y7k18L2sQLkdkBQ3n7ZDGs=
   /regexpu-core/4.4.0:
     dependencies:
       regenerate: 1.4.0
@@ -4042,10 +4170,21 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-eDDWElbwwI3K0Lo6CqbQbA6FwgtCz4kYTarrri1okfkRLZAqstU+B3voZBCjg8Fl6iq0gXrJG6MvRgLthfvgOA==
+  /regjsgen/0.2.0:
+    dev: true
+    resolution:
+      integrity: sha1-bAFq3qxVT3WCP+N6wFuS1aTtsfc=
   /regjsgen/0.5.0:
     dev: true
     resolution:
       integrity: sha512-RnIrLhrXCX5ow/E5/Mh2O4e/oa1/jW0eaBKTSy3LaCj+M3Bqvm97GWDp2yUtzIs4LEn65zR2yiYGFqb2ApnzDA==
+  /regjsparser/0.1.5:
+    dependencies:
+      jsesc: 0.5.0
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha1-fuj4Tcb6eS0/0K4ijSS9lJ6tIFw=
   /regjsparser/0.6.0:
     dependencies:
       jsesc: 0.5.0
@@ -4583,6 +4722,15 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-u0P/VZim6wXYm1n80SnJgzE2Br8=
+  /style-loader/0.23.1:
+    dependencies:
+      loader-utils: 1.2.3
+      schema-utils: 1.0.0
+    dev: true
+    engines:
+      node: '>= 0.12.0'
+    resolution:
+      integrity: sha512-XK+uv9kWwhZMZ1y7mysB+zoihsEj4wneFWAS5qoiLwzW0WzSqMrrsIy+a3zkQJq0ipFtBpX5W3MqyRIBF/WFGg==
   /supports-color/2.0.0:
     dev: true
     engines:
@@ -5164,13 +5312,16 @@ shrinkwrapVersion: 3
 specifiers:
   '@babel/cli': ^7.2.3
   '@babel/core': ^7.2.2
+  '@babel/plugin-proposal-class-properties': ^7.2.3
   '@babel/preset-env': ^7.2.3
   '@babel/preset-react': ^7.0.0
   babel-loader: ^8.0.5
+  css-loader: ^2.1.0
   html-webpack-plugin: ^3.2.0
   prop-types: ^15.6.2
   react: ^16.7.0
   react-dom: ^16.7.0
+  style-loader: ^0.23.1
   webpack: ^4.28.3
   webpack-cli: ^3.2.0
   webpack-dev-server: ^3.1.14
